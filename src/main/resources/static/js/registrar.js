@@ -13,7 +13,7 @@ async function registrarUsuario() {
     // datos.telefono=$('#txtNombre').val();
     datos.password=$('#txtPassword').val();
 
-    let repetirPassword = $('#txtPassword').val();
+    let repetirPassword = $('#txtRepeatPassword').val();
 
     if(repetirPassword != datos.password){
         alert('Contraseña diferente');
@@ -28,4 +28,7 @@ async function registrarUsuario() {
         },
         body: JSON.stringify(datos)
     });
+
+    alert('La cuenta fue creada con exito');
+    window.location.href = 'login.html';
 }
